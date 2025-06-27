@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { emailAtom, inputAtom, userNameAtom } from "../store/atoms";
 import Profile from "./Profile";
-import useDebounce from "../hooks";
+
 
 interface NavData {
   hidden: true | false;
@@ -19,7 +19,7 @@ export default function MediumNavbar({ hidden, uploadPost, formData }: NavData) 
   const email = useRecoilValue(emailAtom);
   const name = useRecoilValue(userNameAtom);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const [inputValue, setInputValue] = useRecoilState(inputAtom);
+  const [,setInputValue] = useRecoilState(inputAtom);
   
 
   useEffect(() => {

@@ -2,7 +2,7 @@
 
 
 import { Mail, Github, Linkedin, Code, Briefcase, Heart } from "lucide-react"
-import MediumNavbar from "../components/MediumNavbar"
+
 
 export default function OurStory() {
   return (

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios";
 import type { blogResponseType } from "@yashxdev/commons";
 import { BACKEND_URL } from "../config";
-import { useRecoilState } from "recoil";
+import {  useRecoilValue } from "recoil";
 import { inputAtom } from "../store/atoms";
 
 
@@ -11,7 +11,7 @@ export const useBlogs = () => {
     const [loading, setLoading] = useState(true);
     const [blogs, setBlogs] = useState<blogResponseType[]>([]);
 
-     const [inputValue, setInputValue] = useRecoilState(inputAtom);
+     const [inputValue] = useRecoilValue(inputAtom);
   
   const debouncedValue = useDebounce(inputValue, 500);
 

@@ -2,16 +2,14 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Plus, ImageIcon, Minus, Code, Quote } from 'lucide-react';
 import { Editor as TiptapEditor } from '@tiptap/react';
 import { Bounce, toast } from 'react-toastify';
-import { useRecoilState } from 'recoil';
-import { contentAtom, imageAtom } from '../store/atoms';
+
 
 export default function CustomDropdown({ editor }: { editor: TiptapEditor | null }) {
     if (!editor) return null;
 
     const [isOpen, setIsOpen] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
-    const [content, setContent] = useRecoilState(contentAtom);
-    const [image, setImage] = useRecoilState(imageAtom)
+
 
     // Close dropdown on outside click
     useEffect(() => {
@@ -98,7 +96,7 @@ export default function CustomDropdown({ editor }: { editor: TiptapEditor | null
 
                 // Remove existing image
                 const doc = editor.state.doc;
-                editor.chain().focus().command(({ tr, state }) => {
+                editor.chain().focus().command(({ tr }) => {
                     let imageFound = false;
                     doc.descendants((node, pos) => {
                         if (node.type.name === 'image') {

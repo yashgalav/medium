@@ -13,8 +13,8 @@ import { useRecoilState } from "recoil";
 
 
 export default function Signup() {
-  const [user,setUser] = useRecoilState(userNameAtom)
-  const [email,setEmail] = useRecoilState(emailAtom)
+  const [,setUser] = useRecoilState(userNameAtom)
+  const [,setEmail] = useRecoilState(emailAtom)
   const [postInputs, setPostInputs] = useState<signupInputType>({
     name: "",
     email: "",

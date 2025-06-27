@@ -1,19 +1,15 @@
-import type { blogResponseType } from "@yashxdev/commons"
 import BlogCard from "../components/BlogCard"
 import MediumFooter from "../components/MediumFooter"
 import MediumNavbar from "../components/MediumNavbar"
-import useDebounce, { useBlogs } from "../hooks"
+import { useBlogs } from "../hooks";
 import { HorizontalBlogCardSkeleton } from "../skeletons/BlogSkeleton"
-import { useRecoilState } from "recoil"
+
 
 function Blogs() {
- 
 
   const { loading, blogs } = useBlogs();
 
   
-
-
   return (
     <div className=" h-screen flex flex-col items-center ">
       <MediumNavbar hidden={true}  />

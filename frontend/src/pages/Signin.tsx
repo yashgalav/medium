@@ -9,12 +9,12 @@ import axios from "axios";
 import { Bounce, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
-import { emailAtom, userIdAtom, userNameAtom } from "../store/atoms";
+import { emailAtom,  userNameAtom } from "../store/atoms";
 
 
 function Signin() {
-  const [user,setUser] = useRecoilState(userNameAtom)
-  const [email,setEmail] = useRecoilState(emailAtom)
+  const [,setUser] = useRecoilState(userNameAtom)
+  const [,setEmail] = useRecoilState(emailAtom)
   const [postInputs, setPostInputs] = useState<signinInputType>({
     email: "",
     password: ""

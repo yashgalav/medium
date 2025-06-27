@@ -10,7 +10,7 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import { contentAtom, imageAtom, titleAtom } from '../store/atoms';
 import axios from 'axios';
 import { Bounce, toast } from 'react-toastify';
-import { createBlogInput } from '@yashxdev/commons';
+
 import { useNavigate } from 'react-router-dom';
 import { BACKEND_URL } from '../config';
 

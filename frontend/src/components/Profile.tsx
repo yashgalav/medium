@@ -1,5 +1,5 @@
 import { User } from 'lucide-react';
-import React, { useEffect, useRef, useState, type HTMLElementType } from 'react'
+import  { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { useRecoilValue } from 'recoil';
 import { emailAtom, userNameAtom } from '../store/atoms';
