@@ -32,7 +32,7 @@ export default function FullBlog({ heading, content, time, name, image, authorId
     const deletePost = (id : string) =>{
         axios.delete(`${BACKEND_URL}/api/v1/blog/${id}`,{
             headers: {
-                Authorization: `Bearer ${localStorage.getItem('token')}`,  // Example: JWT Token from localStorage
+                Authorization: `Bearer ${sessionStorage.getItem('token')}`,  // Example: JWT Token from localStorage
                 
             }
         })
