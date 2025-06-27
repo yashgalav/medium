@@ -22,7 +22,7 @@ export default function FullBlog({ heading, content, time, name, image, authorId
     const minutes = Math.round(words.length / 100)
 
     useEffect(() => {
-        const userId = localStorage.getItem("userId")
+        const userId = sessionStorage.getItem("userId")
 
         if (authorId == userId) {
             setDeleteEligible(true);
