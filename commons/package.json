@@ -1,0 +1,15 @@
+{
+  "name": "@yashxdev/commons",
+  "version": "1.0.5",
+  "description": "1. Create folder `mkdir folder cd folder` 2. Run `npm init -y` to get bootstrap it will generate the `package.json` file. 3. Run `tsc --init` it will create the `tsconfig.json` file. 4. Goto `tsconfig.json` file  and set `rootdir = \"src\"`, `outdir =\"dist\" ` and `declaration = true`. 5. Goto `package.json` file and change the name to `your_npmjs_username/module_name` and change the `main` path to `src/index.js`. 6. Create `index.ts` inside `src` folder. 7. create `.npmignore` file and `src`",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "zod": "^3.25.51"
+  }
+}

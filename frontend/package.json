@@ -1,0 +1,48 @@
+{
+  "name": "frontend",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tiptap/extension-code-block-lowlight": "^2.22.3",
+    "@tiptap/extension-image": "^2.22.3",
+    "@tiptap/extension-placeholder": "^2.22.3",
+    "@tiptap/react": "^2.22.3",
+    "@tiptap/starter-kit": "^2.22.3",
+    "@yashxdev/commons": "^1.0.4",
+    "axios": "^1.9.0",
+    "babel-polyfill": "^6.26.0",
+    "highlight.js": "^11.11.1",
+    "lowlight": "^3.3.0",
+    "lucide-react": "^0.518.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.6.2",
+    "react-toastify": "^11.0.5",
+    "recoil": "^0.7.7"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.25.0",
+    "@types/draft-convert": "^2.1.8",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@types/react-draft-wysiwyg": "^1.13.8",
+    "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.30.1",
+    "vite": "^6.3.5"
+  }
+}
