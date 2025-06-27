@@ -15,12 +15,9 @@ export const useBlogs = () => {
   
   const debouncedValue = useDebounce(inputValue, 500);
 
-//   useEffect(() =>{
-    
-//   },[debouncedValue])
 
     useEffect(() => {
-        axios.get(`${BACKEND_URL}/api/v1/blog?filter=${debouncedValue}`,{
+        axios.get(`${BACKEND_URL}/api/v1/blog?filter=${debouncedValue || ""}`,{
             headers: {
                 Authorization: `Bearer ${sessionStorage.getItem('token')}`,  // Example: JWT Token from localStorage
                 'Content-Type': 'application/json'  // Optional for GET
