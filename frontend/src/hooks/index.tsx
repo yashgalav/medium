@@ -11,9 +11,9 @@ export const useBlogs = () => {
     const [loading, setLoading] = useState(true);
     const [blogs, setBlogs] = useState<blogResponseType[]>([]);
 
-     const [inputValue] = useRecoilValue(inputAtom);
+    const inputValue = useRecoilValue(inputAtom);
   
-  const debouncedValue = useDebounce(inputValue, 500);
+    const debouncedValue = useDebounce(inputValue, 500);
 
 
     useEffect(() => {
@@ -81,7 +81,7 @@ export default function useDebounce(inputValue : string, timeout:number) {
             clearInterval(timeOutNumber);
         }
 
-    },[inputValue])
+    },[inputValue,timeout])
 
   return debouncedValue
 }
