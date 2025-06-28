@@ -33,7 +33,7 @@ export default function BlogPost({ heading, content, time, name, image, postId }
 
         <Link to={`/blog?id=${postId}`}>
             <div className="cursor-pointer border-b max-w-sm md:max-w-xl lg:max-w-2xl px-2 md:px-0 mx-auto mb-5 pb-5">
-                <div className="flex flex-wrap space-x-2 items-center bg-green-400 overflow">
+                <div className="flex flex-wrap space-x-2 items-center  overflow">
                     <Avatar fullName={name} />
                     <div className="text-gray-600 ">{name.toLocaleUpperCase()}</div>
                     <span className="flex w-1 h-1 me-3  rounded-full bg-gray-400"></span>
