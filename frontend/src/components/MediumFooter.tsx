@@ -124,10 +124,14 @@ export default function MediumFooter() {
           <div className="col-span-2 lg:col-span-2">
             <h3 className="font-semibold text-lg mb-4">Get Started</h3>
             <div className="space-y-4">
-              <button className="w-full bg-green-600 hover:bg-green-700 py-1 rounded-lg text-white">Start Writing</button>
-              <button  className="w-full bg-transparent outline py-1 rounded-lg border-gray-600 text-white hover:bg-gray-800">
-                Sign Up
-              </button>
+              <Link to={"/write"}>
+                <button className="w-full bg-green-600 hover:bg-green-700 py-1 rounded-lg text-white">Start Writing</button>
+              </Link>
+              <Link to={"/signup"}>
+                <button className="w-full bg-transparent outline py-1 rounded-lg border-gray-600 text-white hover:bg-gray-800">
+                  Sign Up
+                </button>
+              </Link>
               <button
                 className="w-full bg-transparent outline flex justify-center items-center py-1 rounded-lg border-gray-600 text-white hover:bg-gray-800"
                 onClick={scrollToTop}
